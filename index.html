@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pizzaria</title>
+    <link rel="stylesheet" href="./header.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="btns">
+        <img src="./img/PIZZARIA_MEIA_HORA.png" />
+        <button>Destaques</button>
+        <button>Descontos</button>
+        <button>Pedidos</button>
+      </div>
+    </header>
+
+    <div class="Art-promoção">
+      <img src="./img/Promoção.png" alt="" />
+    </div>
+    <div class="telaBarr">
+      <div class="Text-destaq">
+        <h3><u> DESTAQUE </u></h3>
+      </div>
+      <main>
+
+        <div class="Pizza_1">
+          <img src="./img/calabreça 1.png" alt="" />
+          <h4>PIZZA CALABRESA</h4>
+
+          <div class="btn_preço">
+            <button id="Btn__C__8pc"  onclick="CLick__C__8pc()" >8 pedaços R$ 68,99</button>
+            <button id="Btn__C__6pc" onclick="CLick__C__6pc()"  >6 pedaços R$ 42,50</button>
+          </div>
+
+          <div class="contador">
+            <button onclick="Cont__sub__C()">-</button>
+            <input id="Btn__Cont__C" type="text" value="0" />
+            <button onclick="Cont__soma__C()">+</button>
+          </div>
+        </div>
+
+        <div class="Pizza_2">
+          <img src="./img/Queijo.png" alt="" />
+          <h4>PIZZA QUATRO QUEIJO</h4>
+
+          <div class="btn_preço">
+            <button id="Btn__Q__8pc" onclick="CLick__Q__8pc()" >8 pedaços R$ 70,99</button>
+            <button id="Btn__Q__6pc" onclick="CLick__Q__6pc()" >6 pedaços R$ 45,99</button>
+          </div>
+
+          <div class="contador">
+            <button onclick="Cont__sub__Q()">-</button>
+            <input id="Btn__Cont__Q" type="text" value="0" />
+            <button onclick="Cont__soma__Q()">+</button>
+          </div>
+        </div>
+
+        <div class="Pizza_3">
+          <img src="./img/Portuguesa.png" alt="" />
+          <h4>PIZZA PORTUGUESA</h4>
+
+          <div class="btn_preço">
+            <button id="Btn__P__8pc" onclick="CLick__P__8pc()" >8 pedaços R$ 48,30</button>
+            <button id="Btn__P__6pc" onclick="CLick__P__6pc()" >6 pedaços R$ 42,50</button>
+          </div>
+
+          <div class="contador">
+            <button onclick="Cont__sub__P()">-</button>
+            <input id="Btn__Cont__P" type="text" value="0" />
+            <button onclick="Cont__soma__P()">+</button>
+          </div>
+        </div>
+
+        <div class="Pizza_4">
+          <img src="./img/Italiana.png" alt="" />
+          <h4>PIZZA ITALIANA</h4>
+
+          <div class="btn_preço">
+            <button id="Btn__I__8pc" onclick="CLick__I__8pc()" >8 pedaços R$ 88,10</button>
+            <button id="Btn__I__6pc" onclick="CLick__I__6pc()" >6 pedaços R$ 52,50</button>
+          </div>
+
+          <div class="contador">
+            <button onclick="Cont__sub__I()">-</button>
+            <input id="Btn__Cont__I" type="text" value="0" />
+            <button onclick="Cont__soma__I()">+</button>
+          </div>
+        </div>
+      </main>
+    </div><br>
+
+    <div class="titulo_pedidos">
+      <h1>MEUS PEDIDOS</h1>
+    </div>
+
+    <div class="tela_layout">
+      <h2>PEDIDOS</h2>
+      
+      <button onclick="DeleteAll()" class="Limpar_Pedido">Limpar Pedidos</button>
+      <div class="cinza">
+   
+       <!-- Pedido pizza calabresa 8pc-->
+      <div id="P_C8" class="qtnPizza__C__8pc">
+
+      
+          <div class="Img__C__8pc">
+        <img  src="./img/Imagem 8 Pedaços Calabresa.png" alt="" />
+      </div>
+        
+        <div class="cont_Pizza">
+    
+          <input type="text" name="qtd" id="qtd_Pizza_C__8pc" value= 0 />
+
+            <img onclick="apagarC_8pc()" src="./img/excluir.png" alt="" />
+
+        </div>
+ 
+
+      </div>
+       <!-- Pedido pizza calabresa 6pc-->
+      <div id="P_C6" class="qtnPizza__C__6pc">
+
+      
+        <div class="Img__C__6pc">
+
+          <img  src="./img/Imagem 6 Pedaços Calabresa.png" alt="" />
+  
+        </div>
+        
+        <div class="cont_Pizza">
+    
+          <input type="text" name="qtd" id="qtd_Pizza_C__6pc" value= 0 />
+
+            <img onclick="apagarC_6pc()" src="./img/excluir.png" alt="" />
+
+        </div>
+ 
+
+      </div>
+
+
+      <!-- Pedido pizza queijo 8pc -->
+      <div id="P_Q8" class="qtnPizza__Q__8pc">
+
+     
+
+          <div class="Img__Q__8pc">
+
+            <img  src="./img/Imagem 8 pedaços Queijos.png" alt="" />
+    
+          </div>
+        
+        <div class="cont_Pizza">
+    
+          <input type="text" name="qtd" id="qtd_Pizza_Q__8pc" value= 0 />
+
+            <img onclick="apagarQ_8pc()" src="./img/excluir.png" alt="" />
+
+        </div>
+
+      </div>
+
+      <!-- Pedido pizza queijo 6pc -->
+      <div id="P_Q6" class="qtnPizza__Q__6pc">
+
+     
+        <div class="Img__Q__6pc">
+
+          <img  src="./img/Imagem 6 Pedaços Queijos.png" alt="" />
+  
+        </div>
+        
+        <div class="cont_Pizza">
+    
+          <input type="text" name="qtd" id="qtd_Pizza_Q__6pc" value= 0 />
+
+            <img onclick="apagarQ_6pc()" src="./img/excluir.png" alt="" />
+
+        </div>
+
+      </div>
+
+
+
+
+       <!-- Pedido pizza portuguesa 8pc-->
+      <div id="P_P8" class="qtnPizza__P__8pc">
+
+     
+        <div class="Img__P__8pc">
+
+          <img  src="./img/Imagem 8 Pedaços Portuguesa.png" alt="" />
+  
+        </div>
+        
+        <div class="cont_Pizza">
+    
+          <input type="text" name="qtd" id="qtd_Pizza_P__8pc" value= 0 />
+
+            <img onclick="apagarP_8pc()" src="./img/excluir.png" alt="" />
+
+        </div>
+
+      </div>
+
+       <!-- Pedido pizza portuguesa 6pc-->
+      <div id="P_P6" class="qtnPizza__P__6pc">
+
+     
+    
+        <div class="Img__P__6pc">
+
+          <img onclick="apagarP_6pc()" src="./img/Imagem 6  Pedaços Portuguêsa.png" alt="" />
+  
+        </div>
+        
+        <div class="cont_Pizza">
+    
+          <input type="text" name="qtd" id="qtd_Pizza_P__6pc" value= 0 />
+
+            <img onclick="apagarP_6pc()" src="./img/excluir.png" alt="" />
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+       <!-- Pedido pizza Italiana 8pc-->
+      <div id="P_I8" class="qtnPizza__I__8pc">
+
+     
+        <div class="Img__I__8pc">
+
+          <img  src="./img/Imagem 8 Pedaços Italiana.png" alt="" />
+  
+        </div>
+        
+        <div class="cont_Pizza">
+    
+          <input type="text" name="qtd" id="qtd_Pizza_I__8pc" value= 0 />
+
+            <img onclick="apagarI_8pc()" src="./img/excluir.png" alt="" />
+
+        </div>
+
+      </div>
+
+       <!-- Pedido pizza Italiana 6pc-->
+      <div id="P_I6" class="qtnPizza__I__6pc">
+
+         
+       
+        <div class="Img__I__6pc">
+
+          <img  src="./img/Imagem 6 Pedaços Italiana.png" alt="" />
+  
+        </div>
+  
+        <div class="cont_Pizza">
+    
+          <input type="text" name="qtd" id="qtd_Pizza_I__6pc" value= 0 />
+
+            <img onclick="apagarI_6pc()" src="./img/excluir.png" alt="" />
+
+        </div>
+
+      </div>
+
+
+
+      <div class="bloco_numPedidos">
+        <button>IDENTIFIQUE-SE</button>
+      </div>
+      <br>
+      </div>
+      <br>
+      <div class ="bloco_clientes">
+        <form action="">
+          <label for="">E-mail</label><br>
+          <input type="email" name="Email" placeholder="@gmail.com" required/>
+          <br />
+          <label for="">Nome Completo</label><br>
+          <input type="text" name="nome" required/>
+          <br />
+          <label for="">CPF</label><br>
+          <input
+            type="text"
+            id="CPF"
+            minlength="11"
+            maxlength="11"
+            placeholder="000.000.000-00" required/>
+        
+          <br />
+          
+          <label for="">Celular</label><br>
+          <input
+            type="tel"
+            id="Celular"
+            class="input-padrao"
+            required
+            placeholder="(xx)xxxxx-xxxx" />
+          
+          <div class="enviar-dados">
+            <input type="submit" />
+          </div>
+        </div>
+        </form>
+      </div>
+      
+    
+    
+ 
+    <div class="bloco_pagamentos">
+      <h6>FORMA DE PAGAMENTO</h6>
+      <hr />
+      <input type="radio" name="select" />
+      <label for="">PIX </label>
+      <p>PAGAMENTO A VISTA</p>
+      <hr />
+         <div>
+      <input type="radio" name="select" />
+      <label for="">CARTAO DE CREDITO</label>
+      <p>PAGUE ATE 6x SEM JUROS</p>
+      <hr />
+    </div>
+    <input type="radio" name="select" />
+    <label for="">PAYPAL</label>
+    <p>PARCELE COM JUROS ATE 12x</p>
+    <hr />
+
+    </div>
+
+ 
+    <div class="box-valor">
+      <p>VALOR TOTAL</p>
+      <input id="valor" type="text" value= 00.00 />
+      <button>CONTINUAR</button>
+    </div>
+    <div class="img_Promoçao">
+      <img src="/Duas Pizza Media PNG.png"  alt="">
+      <img src="/Texto.png"  alt="">
+    </div>
+
+    <div class="tamanho_png">
+      <img src="/Tamanho Pizza.png" alt="">
+    </div>
+  </body>
+</html>
